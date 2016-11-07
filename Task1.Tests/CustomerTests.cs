@@ -12,9 +12,9 @@ namespace Task1.Tests
     [TestFixture]
     public class CustomerTests
     {
-        [TestCase("nnRRcc","en-US" , ExpectedResult = "Customer record: Jeffrey Richter, 1000000, +1(425) 555 - 0100")]
+        [TestCase("nnRRcc","en-US" , ExpectedResult = "Customer record: Jeffrey Richter, $1,000,000.00, +1(425) 555 - 0100")]
         [TestCase("nnRR","en-GB", ExpectedResult = "Customer record: Jeffrey Richter, £1,000,000.00")]
-        [TestCase("RR","fr-FR", ExpectedResult = "Customer record: 1 000 000,00 €")]
+        [TestCase("RR","fr-FR", ExpectedResult = "Customer record: 1 000 000,00 €")]
         public string Customer_ToStringRepresentation(string format,string culture)
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(culture);

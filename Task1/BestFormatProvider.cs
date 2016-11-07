@@ -32,7 +32,7 @@ namespace Task1
             switch (format)
             {
                 case "nnRRcc":
-                    return customer.ToString();
+                    return $"Customer record: {name}, {revenue}, {contactPhone}";
                 case "nnccRR":
                     return $"Customer record: {name}, {contactPhone}, {revenue}";
                 case "RRnncc":
@@ -48,9 +48,9 @@ namespace Task1
                 case "nncc":
                     return $"Customer record: {name}, {contactPhone}";
                 case "RRnn":
-                    return $"Customer record: {revenue}, {contactPhone}";
-                case "RRcc":
                     return $"Customer record: {revenue}, {name}";
+                case "RRcc":
+                    return $"Customer record: {revenue}, {contactPhone}";
                 case "ccnn":
                     return $"Customer record: {contactPhone}, {name}";
                 case "ccRR":
