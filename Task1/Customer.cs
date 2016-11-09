@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Task1
 {
@@ -38,6 +39,15 @@ namespace Task1
         /// <returns>String representation of customer</returns>
         public string ToString(string format, IFormatProvider formatProvider)
         {
+            switch (format)
+            {
+                case "nnRRcc":
+                    return $"Customer record: {Name}, {Revenue.ToString("C", CultureInfo.CurrentCulture)}, {ContactPhone}";
+                case "nnRR":
+                    return $"Customer record: {Name}, {Revenue.ToString("C", CultureInfo.CurrentCulture)}";
+                case "nn":
+                    return $"Customer record: {Name}";
+            }
             return string.Format(formatProvider, format, this);
         }
 
@@ -49,7 +59,7 @@ namespace Task1
         public string ToString(string format)
         {
             var formatProvider = new BestFormatProvider();
-            return string.Format(formatProvider, format, this);
+            return ToString(format,formatProvider);
         }
     }
 }

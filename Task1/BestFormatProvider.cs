@@ -31,8 +31,6 @@ namespace Task1
 
             switch (format)
             {
-                case "nnRRcc":
-                    return $"Customer record: {name}, {revenue}, {contactPhone}";
                 case "nnccRR":
                     return $"Customer record: {name}, {contactPhone}, {revenue}";
                 case "RRnncc":
@@ -43,8 +41,6 @@ namespace Task1
                     return $"Customer record: {contactPhone}, {name}, {revenue}";
                 case "ccRRnn":
                     return $"Customer record: {contactPhone}, {revenue}, {name}";
-                case "nnRR":
-                    return $"Customer record: {name}, {revenue}";
                 case "nncc":
                     return $"Customer record: {name}, {contactPhone}";
                 case "RRnn":
@@ -55,8 +51,6 @@ namespace Task1
                     return $"Customer record: {contactPhone}, {name}";
                 case "ccRR":
                     return $"Customer record: {contactPhone}, {revenue}";
-                case "nn":
-                    return $"Customer record: {name}";
                 case "RR":
                     return $"Customer record: {revenue}";
                 case "cc":
